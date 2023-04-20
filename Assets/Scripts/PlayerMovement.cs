@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private float originalStepOffset;
     private float? lastGroundedTime;
     private float? jumpButtonPressedTime;
-    
+
+    public Text text;
 
     void Start()
     {
@@ -82,5 +84,10 @@ public class PlayerMovement : MonoBehaviour
         }
         //Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         //Rig.velocity = Position.normalized * Speed;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        text.color = Color.green;
     }
 }

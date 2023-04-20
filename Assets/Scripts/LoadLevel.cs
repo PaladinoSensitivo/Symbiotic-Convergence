@@ -4,8 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
-{  
-    public void StartGame() {
-		SceneManager.LoadScene("Level");
+{
+    public string previousScene;
+
+    public void StartGame(string sceneName) 
+    {
+		SceneManager.LoadScene(sceneName);
 	}
+
+	public void Update()
+    {
+		if (Input.GetKeyDown(KeyCode.F1))
+        {
+            SceneManager.LoadScene(previousScene);
+        }
+    }
 }
