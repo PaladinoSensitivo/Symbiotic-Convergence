@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveCam : MonoBehaviour
+public class MoveCAM : MonoBehaviour
 {
     [SerializeField]
     private Vector3 offset;
