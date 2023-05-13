@@ -5,89 +5,146 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    public float rotationSpeed;
-    Rigidbody Rig;
-    public float jumpSpeed;
-    public float jumpButtonGracePeriod;
+    private GameManager _GameManager;
+    private CharacterController controller;
+    private Animator anim;
 
-    private Animator animator;
-    private CharacterController characterController;
-    private float ySpeed;
-    private float originalStepOffset;
-    private float? lastGroundedTime;
-    private float? jumpButtonPressedTime;
+    [Header("Config Player")]
+    public int HP;
+    public float movementSpeed = 3f;
+    private Vector3 direction;
+    private bool isWalk;
 
-    public Text text;
+    //Input
+    private float horizontal;
+    private float vertical;
+
+    [Header("Attack Config")]
+    public ParticleSystem fxAttack;
+    public Transform hitBox;
+    [Range(0.2f, 1f)]
+    public float hitRange = 0.5f;
+    public Collider[] hitInfo; 
+    public LayerMask hitMask;
+    private bool isAttack;
+    public int amountDMG;
+
+    [Header("Jump Controller")]
+    public Transform groundCheck;
+    public LayerMask whatIsGround;
+    private bool isGrounded;
+    public float gravity = -19.63f;
+    private Vector3 velocity;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-        characterController = GetComponent<CharacterController>();
-        originalStepOffset = characterController.stepOffset;
-        Rig = GetComponent<Rigidbody>();
+        _GameManager = FindObjectOfType(typeof(GameManager)) as GameManager;
+        controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
-    
-    void FixedUpdate()
+    void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        if(_GameManager.gameState != GameState.GAMEPLAY) {return;}
 
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed;
-        movementDirection.Normalize();
+        Inputs();
 
-        ySpeed += Physics.gravity.y * Time.deltaTime;
+        MoveCharacter();  
 
-        if (characterController.isGrounded)
+        UpdateAnimator(); 
+    }
+    private void FixedUpdate()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, 0.3f, whatIsGround);
+    }
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.gameObject.tag == "TakeDamage")
         {
-            lastGroundedTime = Time.time;
+            GetHit(1);
+        }
+    }
+
+    #region Meus Métodos
+    void Inputs()
+    {
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Attack();
+        }        
+    }
+    void MoveCharacter()
+    {
+          
+
+        direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if(direction.magnitude > 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, targetAngle, 0);
+            isWalk = true;
+        }
+        else
+        {
+            isWalk = false;
         }
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            jumpButtonPressedTime = Time.time;
-        }
+        controller.Move(direction * movementSpeed * Time.deltaTime);
 
-        if (Time.time - lastGroundedTime <= jumpButtonGracePeriod)
-        {
-            characterController.stepOffset = originalStepOffset;
-            ySpeed = -0.5f;
+        velocity.y += gravity * Time.deltaTime;
 
-            if (Time.time - jumpButtonPressedTime <= jumpButtonGracePeriod)
+        controller.Move(velocity * Time.deltaTime);
+    }
+    void UpdateAnimator()
+    {
+        anim.SetBool("isWalk", isWalk);
+        anim.SetBool("isGrounded", isGrounded);
+    }
+    void Attack()
+    {
+        if(!isAttack)
+        {
+            isAttack = true;
+            anim.SetTrigger("Attack");
+            fxAttack.Emit(1);
+
+            hitInfo = Physics.OverlapSphere(hitBox.position, hitRange, hitMask);
+
+            foreach(Collider c in hitInfo)
             {
-                ySpeed = jumpSpeed;
-                jumpButtonPressedTime = null;
-                lastGroundedTime = null;
+                c.gameObject.SendMessage("GetHit", amountDMG, SendMessageOptions.DontRequireReceiver);        
             }
+        }  
+    }
+    void AttackIsDone()
+    {
+        isAttack = false;
+    }    
+    void GetHit(int amount)
+    {   
+        HP -= amount;
+        if(HP > 0)
+        {
+            anim.SetTrigger("Hit");
         }
         else
         {
-            characterController.stepOffset = 0;
+            _GameManager.ChangeGameState(GameState.DIE);
+            anim.SetTrigger("Die");
         }
-
-        Vector3 velocity = movementDirection * magnitude;
-        velocity.y = ySpeed;
-
-        characterController.Move(velocity * Time.deltaTime);
-
-        if (movementDirection != Vector3.zero)
-        {
-            animator.SetBool("IsMoving", true);
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-        }
-        else
-        {
-            animator.SetBool("IsMoving", false);
-        }
-        //Vector3 Position = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        //Rig.velocity = Position.normalized * Speed;
     }
 
-    private void OnTriggerEnter(Collider other)
+    #endregion
+
+    private void OnDrawGizmosSelected()
     {
-        text.color = Color.green;
+        if(hitBox != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(hitBox.position, hitRange);
+        }        
     }
 }
