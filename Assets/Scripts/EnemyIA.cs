@@ -28,13 +28,14 @@ public class EnemyIA : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
 
-        //ChangeState(state);
+        ChangeState(state);
     }
 
     // Update is called once per frame
     void Update()
     {
         StateManager();
+
         if(agent.desiredVelocity.magnitude >= 0.1f)
         {
             isWalk = true;
@@ -109,11 +110,11 @@ public class EnemyIA : MonoBehaviour
         switch(state)
         {
             case enemyState.ALERT:
-                LookAt();
+                //LookAt();
                 break;
             case enemyState.FOLLOW:
                 //Comportamento quando estiver seguindo
-                LookAt();
+                //LookAt();
                 destination = _GameManager.player.position;
                 agent.destination = destination;
                 if(agent.remainingDistance <= agent.stoppingDistance)
@@ -130,15 +131,17 @@ public class EnemyIA : MonoBehaviour
                     Attack();
                 }
                 break;
+                /*
             case enemyState.PATROL:
                 //Comportamento quando esitver patrulhando
                 break;
+                */
         }
     }
     void ChangeState(enemyState newState)
     {
         StopAllCoroutines(); //Encerra todas as coroutinas para garantia que nenhuma sobreescreva a outra  
-        state = newState;      
+        state = newState;
         isAlert = false;
 
         switch(newState)
@@ -176,12 +179,14 @@ public class EnemyIA : MonoBehaviour
                 agent.stoppingDistance = _GameManager.slimeDistanceToAttack;
                 agent.destination = destination;
 
-                break;
+                break;                
             case enemyState.DIE:
                 destination = transform.position;
                 agent.destination = destination;
                 break;
-        }        
+                
+        }
+        
     }
     IEnumerator IDLE()
     {
@@ -218,7 +223,7 @@ public class EnemyIA : MonoBehaviour
     }
     int Rand()
     {
-        int rand = Random.Range(0, 100);
+        int rand = Random.Range(0, 100); //0 ... 99
         return rand;
     }
     void StayStill(int yes)
