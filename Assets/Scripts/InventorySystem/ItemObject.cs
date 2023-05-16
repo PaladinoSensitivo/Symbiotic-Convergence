@@ -5,11 +5,11 @@ using UnityEngine;
 public class ItemObject : MonoBehaviour
 {
     public InventoryItemData referenceItem;
-    public InventorySystem invenSystem;
+    public InventorySystem invenSystem;    
 
     public void OnHandlePickupItem()
     {
-        invenSystem.Add(referenceItem);
-        Destroy(gameObject);
+        invenSystem.Add(referenceItem, this.gameObject);
+        //Destroy(gameObject);
     }
 }

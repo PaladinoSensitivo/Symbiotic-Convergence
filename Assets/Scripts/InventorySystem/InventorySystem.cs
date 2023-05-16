@@ -5,16 +5,22 @@ using System;
 
 public class InventorySystem : MonoBehaviour
 {
+    [SerializeField]
+    GameObject slotPrefab;
+    [SerializeField]
+    Transform slotParent;
     Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
+    Dictionary<InventoryItemData, InventorySlot> m_bagDictionary;
     public List<InventoryItem> inventory {get; private set;}
     // Start is called before the first frame update
     private void Awake()
     {
         inventory = new List<InventoryItem>();
         m_itemDictionary = new Dictionary<InventoryItemData, InventoryItem>();
+        m_bagDictionary = new Dictionary<InventoryItemData, InventorySlot>();
     }
 
-    public InventoryItem Get(InventoryItemData referenceData)
+    public InventoryItem GetItem(InventoryItemData referenceData)
     {
         if(m_itemDictionary.TryGetValue(referenceData, out InventoryItem value))
         {
@@ -22,26 +28,48 @@ public class InventorySystem : MonoBehaviour
         }
         return null;
     }
+    public InventorySlot GetSlot(InventoryItemData referenceData){
+        if(m_bagDictionary.TryGetValue(referenceData, out InventorySlot value)){
+            return value;
+        }
+        return null;
+    }
 
-    public void Add(InventoryItemData referenceData)
+    public void Add(InventoryItemData referenceData, GameObject referenceObj)
     {
-        if(m_itemDictionary.TryGetValue(referenceData, out InventoryItem value))
-        {
+        Debug.Log("Adicionando item: " + referenceData);
+
+        InventoryItem value = GetItem(referenceData);
+
+        if(value != null)
+        {            
             value.AddToStack();
+            Debug.Log("Atualizei no Inventario: " + referenceData + " stack: " + value.stackSize);
+            InventorySlot slot = GetSlot(referenceData);
+            slot.UpdateStack(value.stackSize);
         }
         else
         {
             InventoryItem newItem = new InventoryItem(referenceData);
             inventory.Add(newItem);
-            m_itemDictionary.Add(referenceData, newItem);            
+            m_itemDictionary.Add(referenceData, newItem);
+            GameObject objSlot = Instantiate(slotPrefab, slotParent, false);
+            InventorySlot slot = objSlot.GetComponent<InventorySlot>();
+            m_bagDictionary.Add(referenceData, slot);
+            slot.Set(newItem);
         }
+
+        Destroy(referenceObj);
     }
 
     public void Remove(InventoryItemData referenceData)
     {
-        if(m_itemDictionary.TryGetValue(referenceData, out InventoryItem value))
+        InventoryItem value = GetItem(referenceData);
+
+        if(value != null)
         {
             value.RemoveFromStack();
+            Debug.Log("Removi do Inventario" + referenceData);
 
             if(value.stackSize == 0)
             {
@@ -63,6 +91,7 @@ public class InventoryItem
 {
     public InventoryItemData data {get; private set;}
     public int stackSize {get; private set;}
+    public InventorySlot slot;
 
     public InventoryItem(InventoryItemData source)
     {

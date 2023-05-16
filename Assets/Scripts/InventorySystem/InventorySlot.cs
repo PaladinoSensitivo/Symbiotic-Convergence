@@ -13,21 +13,15 @@ public class InventorySlot : MonoBehaviour
     TextMeshProUGUI m_label;
     
     [SerializeField]
-    GameObject m_stackObj;
-    
-    [SerializeField]
     TextMeshProUGUI m_stackLabel;
     
     public void Set(InventoryItem item)
     {
         m_icon.sprite = item.data.icon;
         m_label.text = item.data.displayName;
-        if(item.stackSize <= 1)
-        {
-            m_stackObj.SetActive(false);
-            return;
-        }
-
         m_stackLabel.text = item.stackSize.ToString();
+    }
+    public void UpdateStack(int stackSize){
+        m_stackLabel.text = stackSize.ToString();
     }
 }
