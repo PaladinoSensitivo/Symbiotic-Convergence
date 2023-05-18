@@ -20,6 +20,7 @@ public class EnemyIA : MonoBehaviour
     private Vector3 destination;
     private int idWaypoint;
 
+    public QuestGiver quest;
     
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,7 @@ public class EnemyIA : MonoBehaviour
         isDie = true;
         yield return new WaitForSeconds(2.5f);
         Destroy(this.gameObject);
+        quest.quest2.goal.EnemyKilled();
     }
 
     private void OnTriggerEnter(Collider other) 

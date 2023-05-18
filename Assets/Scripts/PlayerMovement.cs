@@ -9,9 +9,15 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     private Animator anim;
 
+    [Header("Quest System")]
+    public Quest quest;
+    public QuestGiver questGiver;
+
     [Header("Config Player")]
     public int HP;
     public float movementSpeed = 3f;
+    public int experience;
+    public int gold;
     private Vector3 direction;
     private bool isWalk;
 
@@ -51,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
         MoveCharacter();  
 
         UpdateAnimator(); 
+
+        QuestSystem();
     }
     private void FixedUpdate()
     {
@@ -62,6 +70,12 @@ public class PlayerMovement : MonoBehaviour
         {
             GetHit(1);
         }
+
+        if(other.gameObject.tag == "QuestTrigger")
+        {
+            quest.goal.ReachPlace();
+        }
+        
     }
 
     #region Meus Métodos
@@ -147,4 +161,24 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.DrawWireSphere(hitBox.position, hitRange);
         }        
     }
+
+    public void QuestSystem()
+    {
+        if (quest.isActive)
+        {
+            if (quest.goal.isReached())
+            {
+                experience += quest.experienceReward;
+                gold += quest.goldReward;
+                questGiver.NextQuest();
+            }
+            else if (quest.goal.trigger == true)
+            {
+                experience += quest.experienceReward;
+                gold += quest.goldReward;
+                questGiver.NextQuest();
+            }
+        }
+    }
+
 }

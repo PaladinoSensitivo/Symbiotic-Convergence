@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CamTrigger
   - TakeDamage
+  - QuestTrigger
   layers:
   - Default
   - TransparentFX
