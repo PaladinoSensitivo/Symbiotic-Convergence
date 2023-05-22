@@ -12,6 +12,7 @@ public class Grass : MonoBehaviour
         if(isCut == false) 
         {
             isCut = true;
+            GetComponent<LootBag>().InstantiateLoot(transform.position);
             transform.localScale = new Vector3 (3f, 3f, 3f);
             fxHit.Emit(10);            
         }        

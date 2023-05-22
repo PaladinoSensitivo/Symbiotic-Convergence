@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -825,6 +825,7 @@ GameObject:
   - component: {fileID: 90027577}
   - component: {fileID: 90027576}
   - component: {fileID: 90027575}
+  - component: {fileID: 90027580}
   m_Layer: 8
   m_Name: Grass (14)
   m_TagString: Untagged
@@ -939,6 +940,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90027573}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &90027580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90027573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &92261383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,6 +5962,7 @@ GameObject:
   - component: {fileID: 164822591}
   - component: {fileID: 164822590}
   - component: {fileID: 164822589}
+  - component: {fileID: 164822594}
   m_Layer: 8
   m_Name: Grass (13)
   m_TagString: Untagged
@@ -6060,6 +6077,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164822587}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &164822594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164822587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &166573379
 GameObject:
   m_ObjectHideFlags: 0
@@ -11562,6 +11594,7 @@ GameObject:
   - component: {fileID: 285995065}
   - component: {fileID: 285995064}
   - component: {fileID: 285995063}
+  - component: {fileID: 285995068}
   m_Layer: 8
   m_Name: Grass (18)
   m_TagString: Untagged
@@ -11676,6 +11709,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285995061}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &285995068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285995061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &293610632
 GameObject:
   m_ObjectHideFlags: 0
@@ -16603,6 +16651,7 @@ GameObject:
   - component: {fileID: 324851433}
   - component: {fileID: 324851432}
   - component: {fileID: 324851431}
+  - component: {fileID: 324851436}
   m_Layer: 8
   m_Name: Grass (5)
   m_TagString: Untagged
@@ -16717,6 +16766,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324851429}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &324851436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324851429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &326165550
 GameObject:
   m_ObjectHideFlags: 0
@@ -16731,6 +16795,7 @@ GameObject:
   - component: {fileID: 326165554}
   - component: {fileID: 326165553}
   - component: {fileID: 326165552}
+  - component: {fileID: 326165557}
   m_Layer: 8
   m_Name: Grass (25)
   m_TagString: Untagged
@@ -16845,6 +16910,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326165550}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &326165557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326165550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &327302460
 GameObject:
   m_ObjectHideFlags: 0
@@ -27021,6 +27101,7 @@ GameObject:
   - component: {fileID: 412831772}
   - component: {fileID: 412831771}
   - component: {fileID: 412831770}
+  - component: {fileID: 412831775}
   m_Layer: 8
   m_Name: Grass (1)
   m_TagString: Untagged
@@ -27135,6 +27216,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412831768}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &412831775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412831768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &425082671
 GameObject:
   m_ObjectHideFlags: 0
@@ -32031,6 +32127,7 @@ GameObject:
   - component: {fileID: 485157962}
   - component: {fileID: 485157961}
   - component: {fileID: 485157960}
+  - component: {fileID: 485157965}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Untagged
@@ -32145,6 +32242,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &485157965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485157958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 879709a6c5c04274e8a5ff272b86edb6, type: 2}
 --- !u!1 &500569669
 GameObject:
   m_ObjectHideFlags: 0
@@ -32200,6 +32312,124 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500569669}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &522130307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522130308}
+  - component: {fileID: 522130312}
+  - component: {fileID: 522130311}
+  - component: {fileID: 522130310}
+  - component: {fileID: 522130309}
+  m_Layer: 5
+  m_Name: InventoryUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &522130308
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522130307}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 556562207}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.00024414062, y: -973}
+  m_SizeDelta: {x: 0, y: 103.376}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &522130309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522130307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
+--- !u!114 &522130310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522130307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &522130311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522130307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5254902}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &522130312
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522130307}
+  m_CullTransparentMesh: 1
 --- !u!1 &526118397
 GameObject:
   m_ObjectHideFlags: 0
@@ -32485,6 +32715,7 @@ RectTransform:
   - {fileID: 794095404}
   - {fileID: 640907791}
   - {fileID: 1668576161}
+  - {fileID: 522130308}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32574,6 +32805,7 @@ GameObject:
   - component: {fileID: 564860441}
   - component: {fileID: 564860440}
   - component: {fileID: 564860439}
+  - component: {fileID: 564860444}
   m_Layer: 8
   m_Name: Grass (20)
   m_TagString: Untagged
@@ -32688,6 +32920,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564860437}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &564860444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564860437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &567095891
 GameObject:
   m_ObjectHideFlags: 0
@@ -32702,6 +32949,7 @@ GameObject:
   - component: {fileID: 567095895}
   - component: {fileID: 567095894}
   - component: {fileID: 567095893}
+  - component: {fileID: 567095898}
   m_Layer: 8
   m_Name: Grass (24)
   m_TagString: Untagged
@@ -32816,6 +33064,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567095891}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &567095898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567095891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &568088590
 GameObject:
   m_ObjectHideFlags: 0
@@ -39064,6 +39327,7 @@ GameObject:
   - component: {fileID: 841732914}
   - component: {fileID: 841732913}
   - component: {fileID: 841732912}
+  - component: {fileID: 841732917}
   m_Layer: 8
   m_Name: Grass (10)
   m_TagString: Untagged
@@ -39178,6 +39442,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841732910}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &841732917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841732910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &842486505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7694391970321806158, guid: effaaa665bce18747b546d1bc5c10965,
@@ -39245,6 +39524,7 @@ GameObject:
   - component: {fileID: 872568044}
   - component: {fileID: 872568043}
   - component: {fileID: 872568042}
+  - component: {fileID: 872568047}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Untagged
@@ -39359,6 +39639,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &872568047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872568040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 879709a6c5c04274e8a5ff272b86edb6, type: 2}
 --- !u!1 &877580667
 GameObject:
   m_ObjectHideFlags: 0
@@ -39510,7 +39805,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896759107}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0
   m_Height: 1.45
@@ -39945,6 +40240,7 @@ GameObject:
   - component: {fileID: 959842584}
   - component: {fileID: 959842583}
   - component: {fileID: 959842582}
+  - component: {fileID: 959842587}
   m_Layer: 8
   m_Name: Grass (16)
   m_TagString: Untagged
@@ -40059,6 +40355,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959842580}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &959842587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959842580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &972169339
 GameObject:
   m_ObjectHideFlags: 0
@@ -40230,6 +40541,7 @@ GameObject:
   - component: {fileID: 988214236}
   - component: {fileID: 988214235}
   - component: {fileID: 988214234}
+  - component: {fileID: 988214239}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Untagged
@@ -40344,6 +40656,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &988214239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988214232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 879709a6c5c04274e8a5ff272b86edb6, type: 2}
 --- !u!1 &991313418
 GameObject:
   m_ObjectHideFlags: 0
@@ -40509,6 +40836,7 @@ GameObject:
   - component: {fileID: 1042523503}
   - component: {fileID: 1042523502}
   - component: {fileID: 1042523501}
+  - component: {fileID: 1042523506}
   m_Layer: 8
   m_Name: Grass (12)
   m_TagString: Untagged
@@ -40623,6 +40951,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042523499}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1042523506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042523499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1079914920
 GameObject:
   m_ObjectHideFlags: 0
@@ -40749,6 +41092,7 @@ GameObject:
   - component: {fileID: 1080998122}
   - component: {fileID: 1080998121}
   - component: {fileID: 1080998120}
+  - component: {fileID: 1080998125}
   m_Layer: 8
   m_Name: Grass (19)
   m_TagString: Untagged
@@ -40863,6 +41207,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080998118}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1080998125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080998118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1175700961
 GameObject:
   m_ObjectHideFlags: 0
@@ -51278,6 +51637,7 @@ GameObject:
   - component: {fileID: 1376608922}
   - component: {fileID: 1376608921}
   - component: {fileID: 1376608920}
+  - component: {fileID: 1376608925}
   m_Layer: 8
   m_Name: Grass (7)
   m_TagString: Untagged
@@ -51392,6 +51752,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376608918}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1376608925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376608918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1412545819
 GameObject:
   m_ObjectHideFlags: 0
@@ -51514,6 +51889,7 @@ GameObject:
   - component: {fileID: 1442657007}
   - component: {fileID: 1442657006}
   - component: {fileID: 1442657005}
+  - component: {fileID: 1442657010}
   m_Layer: 8
   m_Name: Grass (17)
   m_TagString: Untagged
@@ -51628,6 +52004,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442657003}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1442657010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442657003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1445420420
 GameObject:
   m_ObjectHideFlags: 0
@@ -56524,6 +56915,7 @@ GameObject:
   - component: {fileID: 1455444678}
   - component: {fileID: 1455444677}
   - component: {fileID: 1455444676}
+  - component: {fileID: 1455444681}
   m_Layer: 8
   m_Name: Grass (21)
   m_TagString: Untagged
@@ -56638,6 +57030,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455444674}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1455444681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455444674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1475437490
 GameObject:
   m_ObjectHideFlags: 0
@@ -56985,6 +57392,7 @@ GameObject:
   - component: {fileID: 1519581130}
   - component: {fileID: 1519581129}
   - component: {fileID: 1519581128}
+  - component: {fileID: 1519581133}
   m_Layer: 8
   m_Name: Grass (9)
   m_TagString: Untagged
@@ -57099,6 +57507,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519581126}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1519581133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519581126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1522463209
 GameObject:
   m_ObjectHideFlags: 0
@@ -57113,6 +57536,7 @@ GameObject:
   - component: {fileID: 1522463213}
   - component: {fileID: 1522463212}
   - component: {fileID: 1522463211}
+  - component: {fileID: 1522463216}
   m_Layer: 8
   m_Name: Grass (3)
   m_TagString: Untagged
@@ -57227,6 +57651,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522463209}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1522463216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522463209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1530333693
 GameObject:
   m_ObjectHideFlags: 0
@@ -57539,6 +57978,7 @@ GameObject:
   - component: {fileID: 1581069863}
   - component: {fileID: 1581069862}
   - component: {fileID: 1581069861}
+  - component: {fileID: 1581069866}
   m_Layer: 8
   m_Name: Grass (6)
   m_TagString: Untagged
@@ -57653,6 +58093,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581069859}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1581069866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581069859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1586027992
 GameObject:
   m_ObjectHideFlags: 0
@@ -62925,6 +63380,7 @@ GameObject:
   - component: {fileID: 1647464452}
   - component: {fileID: 1647464451}
   - component: {fileID: 1647464450}
+  - component: {fileID: 1647464455}
   m_Layer: 8
   m_Name: Grass (8)
   m_TagString: Untagged
@@ -63039,6 +63495,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647464448}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1647464455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647464448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1649227939
 GameObject:
   m_ObjectHideFlags: 0
@@ -68061,6 +68532,7 @@ GameObject:
   - component: {fileID: 1671313122}
   - component: {fileID: 1671313121}
   - component: {fileID: 1671313120}
+  - component: {fileID: 1671313125}
   m_Layer: 8
   m_Name: Grass (4)
   m_TagString: Untagged
@@ -68175,6 +68647,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671313118}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1671313125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671313118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1001 &1676705109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78602,6 +79089,7 @@ GameObject:
   - component: {fileID: 1828358131}
   - component: {fileID: 1828358130}
   - component: {fileID: 1828358129}
+  - component: {fileID: 1828358134}
   m_Layer: 8
   m_Name: Grass (22)
   m_TagString: Untagged
@@ -78716,6 +79204,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828358127}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1828358134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828358127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1830145749
 GameObject:
   m_ObjectHideFlags: 0
@@ -78730,6 +79233,7 @@ GameObject:
   - component: {fileID: 1830145753}
   - component: {fileID: 1830145752}
   - component: {fileID: 1830145751}
+  - component: {fileID: 1830145756}
   m_Layer: 8
   m_Name: Grass (15)
   m_TagString: Untagged
@@ -78844,6 +79348,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830145749}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1830145756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830145749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1835234306
 GameObject:
   m_ObjectHideFlags: 0
@@ -83774,6 +84293,7 @@ GameObject:
   - component: {fileID: 1837455543}
   - component: {fileID: 1837455542}
   - component: {fileID: 1837455541}
+  - component: {fileID: 1837455546}
   m_Layer: 8
   m_Name: Grass (2)
   m_TagString: Untagged
@@ -83888,6 +84408,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837455539}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &1837455546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837455539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &1861539061
 GameObject:
   m_ObjectHideFlags: 0
@@ -89539,6 +90074,7 @@ GameObject:
   - component: {fileID: 2089126513}
   - component: {fileID: 2089126512}
   - component: {fileID: 2089126511}
+  - component: {fileID: 2089126516}
   m_Layer: 8
   m_Name: Grass (23)
   m_TagString: Untagged
@@ -89653,6 +90189,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089126509}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &2089126516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089126509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &2099748309
 GameObject:
   m_ObjectHideFlags: 0
@@ -89667,6 +90218,7 @@ GameObject:
   - component: {fileID: 2099748313}
   - component: {fileID: 2099748312}
   - component: {fileID: 2099748311}
+  - component: {fileID: 2099748316}
   m_Layer: 8
   m_Name: Grass (11)
   m_TagString: Untagged
@@ -89781,6 +90333,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099748309}
   m_Mesh: {fileID: 4300000, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
+--- !u!114 &2099748316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099748309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!1 &2111650465
 GameObject:
   m_ObjectHideFlags: 0
@@ -89936,6 +90503,58 @@ Transform:
   m_Father: {fileID: 204166513}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2141243633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141243635}
+  - component: {fileID: 2141243634}
+  m_Layer: 5
+  m_Name: Inventory System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2141243634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141243633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2e0c6d8e958c443894f3ac319a69c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotPrefab: {fileID: 1541683294942648847, guid: f2baf7af7f6ea3045bed2e9424f81efa,
+    type: 3}
+  slotParent: {fileID: 522130308}
+--- !u!224 &2141243635
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141243633}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.32239583, y: 0.32239583, z: 0.32239583}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 960, y: 539.7092}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1019368061183583
 GameObject:
   m_ObjectHideFlags: 0
@@ -89966,6 +90585,7 @@ GameObject:
   - component: {fileID: 95471671900003752}
   - component: {fileID: 95471671900003754}
   - component: {fileID: 95471671900003755}
+  - component: {fileID: 95471671900003756}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Untagged
@@ -90513,6 +91133,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &95471671900003756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090219044965961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 879709a6c5c04274e8a5ff272b86edb6, type: 2}
 --- !u!137 &137967903917099871
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -130561,6 +131196,7 @@ GameObject:
   - component: {fileID: 2066896391477064755}
   - component: {fileID: 2066896391477064757}
   - component: {fileID: 2066896391477064759}
+  - component: {fileID: 2066896391477064761}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -131902,6 +132538,19 @@ Transform:
   m_Father: {fileID: 2066896391477064756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2066896391477064761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066896391476701260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf180353458d87429a22a93e157b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCol: {fileID: 896759109}
 --- !u!4 &2066896391477064762
 Transform:
   m_ObjectHideFlags: 0
@@ -137758,6 +138407,7 @@ GameObject:
   - component: {fileID: 3179745384730454914}
   - component: {fileID: 855751952}
   - component: {fileID: 855751957}
+  - component: {fileID: 3356751432312083315}
   m_Layer: 8
   m_Name: Grass
   m_TagString: Untagged
@@ -137781,6 +138431,21 @@ Transform:
   m_Father: {fileID: 1080847104}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3356751432312083315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356751432311721810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace919b629c3d2043866a9c037dbef42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
+    type: 3}
+  lootData: {fileID: 11400000, guid: 19474c42b2a06e649b317f50c195e98f, type: 2}
 --- !u!23 &3595342077051662902
 MeshRenderer:
   m_ObjectHideFlags: 0
