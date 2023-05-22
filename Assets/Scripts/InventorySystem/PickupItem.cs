@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    ItemObject itemObj;
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.E))
+    public Collider playerCol;
+    void OnTriggerEnter(Collider other) {
+        if(other.GetComponent<ItemObject>() != null)
         {
-            itemObj = FindObjectOfType<ItemObject>();
-            itemObj.OnHandlePickupItem();
+            other.GetComponent<ItemObject>().OnHandlePickupItem();
         }
     }
 }

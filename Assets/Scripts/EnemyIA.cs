@@ -53,6 +53,7 @@ public class EnemyIA : MonoBehaviour
     {
         isDie = true;
         yield return new WaitForSeconds(2.5f);
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
         Destroy(this.gameObject);
         quest.quest2.goal.EnemyKilled();
     }
