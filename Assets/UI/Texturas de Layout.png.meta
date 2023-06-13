@@ -129,10 +129,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Texturas de Layout_0
+      name: FullHeart
       rect:
         serializedVersion: 2
-        x: 62
+        x: 63
         y: 354
         width: 55
         height: 63
@@ -150,7 +150,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texturas de Layout_1
+      name: EmptyHeart
       rect:
         serializedVersion: 2
         x: 162
@@ -171,7 +171,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texturas de Layout_2
+      name: PainelUI
       rect:
         serializedVersion: 2
         x: 24
@@ -180,7 +180,7 @@ TextureImporter:
         height: 94
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 10, y: 10, z: 10, w: 10}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -192,7 +192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texturas de Layout_3
+      name: IconGenerico
       rect:
         serializedVersion: 2
         x: 70
@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texturas de Layout_4
+      name: Button
       rect:
         serializedVersion: 2
         x: 157
@@ -222,7 +222,7 @@ TextureImporter:
         height: 67
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 15, y: 15, z: 15, w: 15}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -234,10 +234,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texturas de Layout_5
+      name: IconInventory
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 46
         width: 88
         height: 87
@@ -255,7 +255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texturas de Layout_6
+      name: IconAbilities
       rect:
         serializedVersion: 2
         x: 146
@@ -276,7 +276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texturas de Layout_7
+      name: IconSettings
       rect:
         serializedVersion: 2
         x: 246
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texturas de Layout_8
+      name: IconQuests
       rect:
         serializedVersion: 2
         x: 346
@@ -328,15 +328,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Texturas de Layout_0: 1962368727
-      Texturas de Layout_1: -11625508
-      Texturas de Layout_2: -1848453783
-      Texturas de Layout_3: -1162577925
-      Texturas de Layout_4: -1975927031
-      Texturas de Layout_5: 295044210
-      Texturas de Layout_6: -644818342
-      Texturas de Layout_7: -587476715
-      Texturas de Layout_8: -266158639
+      Button: -1975927031
+      EmptyHeart: -11625508
+      FullHeart: 1962368727
+      IconAbilities: -644818342
+      IconGenerico: -1162577925
+      IconInventory: 295044210
+      IconQuests: -266158639
+      IconSettings: -587476715
+      PainelUI: -1848453783
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
