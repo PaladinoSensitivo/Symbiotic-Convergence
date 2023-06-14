@@ -47,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
         _GameManager = FindObjectOfType(typeof(GameManager)) as GameManager;
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        Health healthUI = gameObject.GetComponent<Health>();
+        healthUI.health = HP;
     }
     void Update()
     {
@@ -140,6 +142,10 @@ public class PlayerMovement : MonoBehaviour
     void GetHit(int amount)
     {   
         HP -= amount;
+        
+        Health healthUI = gameObject.GetComponent<Health>();
+        healthUI.health = HP;
+        
         if(HP > 0)
         {
             anim.SetTrigger("Hit");
