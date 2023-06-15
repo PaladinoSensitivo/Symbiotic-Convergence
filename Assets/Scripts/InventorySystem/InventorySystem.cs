@@ -41,22 +41,24 @@ public class InventorySystem : MonoBehaviour
 
         InventoryItem value = GetItem(referenceData);
 
-        if(value != null)
-        {            
-            value.AddToStack();
-            Debug.Log("Atualizei no Inventario: " + referenceData + " stack: " + value.stackSize);
-            InventorySlot slot = GetSlot(referenceData);
-            slot.UpdateStack(value.stackSize);
-        }
-        else
-        {
-            InventoryItem newItem = new InventoryItem(referenceData);
-            inventory.Add(newItem);
-            m_itemDictionary.Add(referenceData, newItem);
-            GameObject objSlot = Instantiate(slotPrefab, slotParent, false);
-            InventorySlot slot = objSlot.GetComponent<InventorySlot>();
-            m_bagDictionary.Add(referenceData, slot);
-            slot.Set(newItem);
+        if(m_bagDictionary.Count < 35){
+            if(value != null)
+            {            
+                value.AddToStack();
+                Debug.Log("Atualizei no Inventario: " + referenceData + " stack: " + value.stackSize);
+                InventorySlot slot = GetSlot(referenceData);
+                slot.UpdateStack(value.stackSize);
+            }
+            else
+            {
+                InventoryItem newItem = new InventoryItem(referenceData);
+                inventory.Add(newItem);
+                m_itemDictionary.Add(referenceData, newItem);
+                GameObject objSlot = Instantiate(slotPrefab, slotParent, false);
+                InventorySlot slot = objSlot.GetComponent<InventorySlot>();
+                m_bagDictionary.Add(referenceData, slot);
+                slot.Set(newItem);
+            }
         }
 
         Destroy(referenceObj);
