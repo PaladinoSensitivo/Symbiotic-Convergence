@@ -34,8 +34,11 @@ public class QuestGoal
 
     public void ReachPlace()
     {
-        if (goalType == GoalType.Trigger)
+        Debug.Log("Tentei chegar");
+        if (goalType == GoalType.Trigger){
             trigger = true;
+            Debug.Log("Cheguei");
+        }
     }    
 }
 public enum GoalType

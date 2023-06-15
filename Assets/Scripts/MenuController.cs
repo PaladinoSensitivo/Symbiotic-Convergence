@@ -4,19 +4,36 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    bool isActive = false;
-    [SerializeField]GameObject questLog;
+    bool isQuestActive;
+    bool isInvenActive;
+    bool isDestroyed;
+    [SerializeField]GameObject questLog, questLogTxT, inventoryTAB;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && isActive == false)
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            questLog.SetActive(true);
-            isActive = true;
+            questLog.SetActive(!isQuestActive);
+            isQuestActive = !isQuestActive;
+            if(questLogTxT == null){
+                isDestroyed = true;
+            }
+            else {
+                Destroy(questLogTxT);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.J) && isActive == true || Input.GetKeyDown(KeyCode.Escape) && isActive == true) 
+        if(Input.GetKeyDown(KeyCode.I))
         {
-            questLog.SetActive(false);
-            isActive = false;
+            inventoryTAB.SetActive(isInvenActive);
+            isInvenActive = !isInvenActive;
         }
+    }
+
+    public void SetQuestActive(){        
+        questLog.SetActive(!isQuestActive);
+        isQuestActive = !isQuestActive;
+    }
+    public void SetInvenActive(){
+        inventoryTAB.SetActive(!isInvenActive);
+        isInvenActive = !isInvenActive;
     }
 }
