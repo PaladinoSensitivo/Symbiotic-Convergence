@@ -6,14 +6,9 @@ using UnityEngine.UI;
 public class QuestGiver : MonoBehaviour
 {
     public PlayerMovement player;
-    /*public Quest quest;
+    public Quest quest;
     public Quest quest2;
-    public Quest quest3;*/
-    public Quest[] questList;
-    public GameObject activeQuestTAB, completedQuestTAB;
-    public GameObject completedQuestPF;
-    public Transform completedQuestParent;
-    public int index;
+    public Quest quest3;
 
     public Text titleText;
     public Text descriptionText;
@@ -22,24 +17,20 @@ public class QuestGiver : MonoBehaviour
 
     public void Start()
     {
-        player.quest = questList[index];
-        questList[index].isActive = true;
-        Debug.Log(questList[index].goal.goalType);
-        titleText.text = questList[index].title;
-        descriptionText.text = questList[index].description;
-        experienceText.text = questList[index].experienceReward.ToString();
-        goldText.text = questList[index].goldReward.ToString();
+        player.quest = quest;
+        titleText.text = quest.title;
+        descriptionText.text = quest.description;
+        experienceText.text = quest.experienceReward.ToString();
+        goldText.text = quest.goldReward.ToString();
+    }
+    public void Update()
+    {
+
     }
 
     public void NextQuest()
     {
-        UpdateCompletedQuest();
-        index++;
-        Debug.Log(questList[index].goal.goalType);
-        questList[index-1].isActive = false;
-        questList[index].isActive = true;
-        UpdateActiveQuest();
-        /*if(quest.isActive == true) { 
+        if(quest.isActive == true) { 
             quest.isActive = false;
             quest2.isActive = true;
             player.quest = quest2;
@@ -57,33 +48,6 @@ public class QuestGiver : MonoBehaviour
             descriptionText.text = quest3.description;
             experienceText.text = quest3.experienceReward.ToString();
             goldText.text = quest3.goldReward.ToString();
-        }*/
-    }
-    public void UpdateCompletedQuest(){
-        GameObject questSlot = Instantiate(completedQuestPF, completedQuestParent, false);
-        CompletedQuestSlot cQuestSlot = questSlot.GetComponent<CompletedQuestSlot>();
-        cQuestSlot.Set(titleText, experienceText, goldText);
-    }
-    public void UpdateActiveQuest(){
-        player.quest = questList[index];
-        titleText.text = questList[index].title;
-        descriptionText.text = questList[index].description;
-        experienceText.text = questList[index].experienceReward.ToString();
-        goldText.text = questList[index].goldReward.ToString();        
-    }
-    public Quest CurrentQuest(){
-        return questList[index];
+        }
     }
 }
-
-/*public class CompletedQuestData 
-{
-    public Text completedTitle;
-    public Text completedTitleExperienceText;
-    public Text completedTitleGoldText;
-    public CompletedQuestData(Text title, Text experienceText, Text goldText){
-        completedTitle = title;
-        completedTitleExperienceText = experienceText;
-        completedTitleGoldText = goldText;
-    }
-}*/

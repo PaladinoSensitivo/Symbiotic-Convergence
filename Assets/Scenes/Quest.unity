@@ -32449,7 +32449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
     type: 3}
-  lootData: {fileID: 11400000, guid: 483ee476fd99b4f44a7e189ee9fbb97e, type: 2}
+  lootData: {fileID: 11400000, guid: 781ce5cfb126e15408426c2d24260af4, type: 2}
 --- !u!1 &500569669
 GameObject:
   m_ObjectHideFlags: 0
@@ -40004,7 +40004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
     type: 3}
-  lootData: {fileID: 11400000, guid: 774867277afc9404b9d7612b28abeb4b, type: 2}
+  lootData: {fileID: 11400000, guid: 781ce5cfb126e15408426c2d24260af4, type: 2}
 --- !u!1 &877580667
 GameObject:
   m_ObjectHideFlags: 0
@@ -92108,7 +92108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefabDrop: {fileID: 4902876184200130953, guid: b5fdfcf36bcfd3d4890baab6b6e2878e,
     type: 3}
-  lootData: {fileID: 11400000, guid: 0b06a0163d0135a4b83b1c75b9ce1164, type: 2}
+  lootData: {fileID: 11400000, guid: 781ce5cfb126e15408426c2d24260af4, type: 2}
 --- !u!137 &137967903917099871
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

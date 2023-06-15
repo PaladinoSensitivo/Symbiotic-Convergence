@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(other.gameObject.tag == "QuestTrigger")
         {
-            questGiver.CurrentQuest().goal.ReachPlace();
+            quest.goal.ReachPlace();
         }
         
     }
@@ -170,18 +170,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void QuestSystem()
     {
-        if (questGiver.CurrentQuest().isActive)
+        if (quest.isActive)
         {
-            if (questGiver.CurrentQuest().goal.isReached())
+            if (quest.goal.isReached())
             {
-                experience += questGiver.CurrentQuest().experienceReward;
-                gold += questGiver.CurrentQuest().goldReward;
+                experience += quest.experienceReward;
+                gold += quest.goldReward;
                 questGiver.NextQuest();
             }
-            if (questGiver.CurrentQuest().goal.trigger == true)
+            else if (quest.goal.trigger == true)
             {
-                experience += questGiver.CurrentQuest().experienceReward;
-                gold += questGiver.CurrentQuest().goldReward;
+                experience += quest.experienceReward;
+                gold += quest.goldReward;
                 questGiver.NextQuest();
             }
         }
