@@ -16,6 +16,7 @@ public class MenuController : MonoBehaviour
             isQuestActive = !isQuestActive;
             if(questLogTxT == null){
                 isDestroyed = true;
+                Destroy(questLogTxT);
             }
             else {
                 Destroy(questLogTxT);
