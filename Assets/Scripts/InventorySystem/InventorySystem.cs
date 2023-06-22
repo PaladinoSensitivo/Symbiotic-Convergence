@@ -8,7 +8,7 @@ public class InventorySystem : MonoBehaviour
     [SerializeField]
     GameObject slotPrefab;
     [SerializeField]
-    Transform slotParent;
+    Transform slotParent, slotUIParent;
     Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
     Dictionary<InventoryItemData, InventorySlot> m_bagDictionary;
     public List<InventoryItem> inventory {get; private set;}
@@ -55,9 +55,12 @@ public class InventorySystem : MonoBehaviour
                 inventory.Add(newItem);
                 m_itemDictionary.Add(referenceData, newItem);
                 GameObject objSlot = Instantiate(slotPrefab, slotParent, false);
+                GameObject objSlotUI = Instantiate(slotPrefab, slotParent, false);
                 InventorySlot slot = objSlot.GetComponent<InventorySlot>();
+                InventorySlot slotUI = objSlot.GetComponent<InventorySlot>();
                 m_bagDictionary.Add(referenceData, slot);
                 slot.Set(newItem);
+                slotUI = slot;
             }
         }
 
