@@ -10,7 +10,7 @@ public class CastFireBall : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Shoot();
         }
@@ -18,6 +18,6 @@ public class CastFireBall : MonoBehaviour
         
     void Shoot()
     {
-        Instantiate(fireBallPf, firePoint.position, firePoint.rotation);
+        Instantiate(fireBallPf, firePoint.position, Quaternion.identity);
     }
 }

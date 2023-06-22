@@ -9,7 +9,8 @@ public class QuestGoal
 
     public int requiredAmount;
     public int currentAmount;
-    public bool trigger = false;
+    public Collider questTrigger;
+    public bool isTrigger = false;
 
     public bool isReached()
     {
@@ -34,10 +35,8 @@ public class QuestGoal
 
     public void ReachPlace()
     {
-        Debug.Log("Tentei chegar");
         if (goalType == GoalType.Trigger){
-            trigger = true;
-            Debug.Log("Cheguei");
+            isTrigger = true;
         }
     }    
 }

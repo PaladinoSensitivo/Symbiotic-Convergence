@@ -75,7 +75,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(other.gameObject.tag == "QuestTrigger")
         {
-            questGiver.CurrentQuest().goal.ReachPlace();
+            Debug.Log("encostei num QuesTrigger");
+            if(other == questGiver.CurrentQuest().goal.questTrigger){
+                Debug.Log("QuesTrigger igual o da quest");
+                questGiver.CurrentQuest().goal.ReachPlace();
+            }
         }
         
     }
@@ -174,14 +178,17 @@ public class PlayerMovement : MonoBehaviour
         {
             if (questGiver.CurrentQuest().goal.isReached())
             {
-                experience += questGiver.CurrentQuest().experienceReward;
-                gold += questGiver.CurrentQuest().goldReward;
+                //Gold and Experience Gain
+
+                //experience += questGiver.CurrentQuest().experienceReward;
+                //gold += questGiver.CurrentQuest().goldReward;
                 questGiver.NextQuest();
             }
-            if (questGiver.CurrentQuest().goal.trigger == true)
+            if (questGiver.CurrentQuest().goal.isTrigger == true)
             {
-                experience += questGiver.CurrentQuest().experienceReward;
-                gold += questGiver.CurrentQuest().goldReward;
+                //experience += questGiver.CurrentQuest().experienceReward;
+                //gold += questGiver.CurrentQuest().goldReward;
+                Debug.Log("proxima quest");
                 questGiver.NextQuest();
             }
         }

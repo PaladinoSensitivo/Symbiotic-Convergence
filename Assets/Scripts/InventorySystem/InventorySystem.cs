@@ -54,13 +54,10 @@ public class InventorySystem : MonoBehaviour
                 InventoryItem newItem = new InventoryItem(referenceData);
                 inventory.Add(newItem);
                 m_itemDictionary.Add(referenceData, newItem);
-                GameObject objSlot = Instantiate(slotPrefab, slotParent, false);
-                GameObject objSlotUI = Instantiate(slotPrefab, slotParent, false);
+                GameObject objSlot = Instantiate(slotPrefab, slotUIParent, false);
                 InventorySlot slot = objSlot.GetComponent<InventorySlot>();
-                InventorySlot slotUI = objSlot.GetComponent<InventorySlot>();
                 m_bagDictionary.Add(referenceData, slot);
                 slot.Set(newItem);
-                slotUI = slot;
             }
         }
 
@@ -81,12 +78,6 @@ public class InventorySystem : MonoBehaviour
                 inventory.Remove(value);
                 m_itemDictionary.Remove(referenceData);
             }
-        }
-        else
-        {
-            InventoryItem newItem = new InventoryItem(referenceData);
-            inventory.Add(newItem);
-            m_itemDictionary.Add(referenceData, newItem);            
         }
     }
 }
