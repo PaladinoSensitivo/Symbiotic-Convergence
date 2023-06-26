@@ -55,7 +55,9 @@ public class EnemyIA : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         GetComponent<LootBag>().InstantiateLoot(transform.position);
         Destroy(this.gameObject);
-        quest.quest2.goal.EnemyKilled();
+        if(quest.questList[quest.index].goal.goalType == 0){
+            quest.questList[quest.index].goal.EnemyKilled();
+        }
     }
 
     private void OnTriggerEnter(Collider other) 
