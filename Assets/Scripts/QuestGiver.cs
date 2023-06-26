@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class QuestGiver : MonoBehaviour
 {
     public PlayerMovement player;
-    public Quest quest;
-    public Quest quest2;
-    public Quest quest3;
+    public Quest[] questList;
+    public GameObject activeQuestTAB, completedQuestTAB;
+    public GameObject completedQuestPF;
+    public Transform completedQuestParent;
+    public int index;
 
     public Text titleText;
     public Text descriptionText;
@@ -28,26 +30,35 @@ public class QuestGiver : MonoBehaviour
 
     }
 
+    void FixedUpdate(){
+        if(CurrentQuest().goal.isReached() == true){
+            NextQuest();
+        }
+    }
     public void NextQuest()
     {
-        if(quest.isActive == true) { 
-            quest.isActive = false;
-            quest2.isActive = true;
-            player.quest = quest2;
-            titleText.text = quest2.title;
-            descriptionText.text = quest2.description;
-            experienceText.text = quest2.experienceReward.ToString();
-            goldText.text = quest2.goldReward.ToString();
-        }
-        else if(quest2.isActive == true)
-        {
-            quest2.isActive = false;
-            quest3.isActive = true;
-            player.quest = quest3;
-            titleText.text = quest3.title;
-            descriptionText.text = quest3.description;
-            experienceText.text = quest3.experienceReward.ToString();
-            goldText.text = quest3.goldReward.ToString();
-        }
+        UpdateCompletedQuest();
+        if(index < questList.Length)
+            index++;
+        Debug.Log(index);
+        Debug.Log(questList[index].goal.goalType);
+        questList[index-1].isActive = false;
+        questList[index].isActive = true;
+        UpdateActiveQuest();
+    }
+    public void UpdateCompletedQuest(){
+        GameObject questSlot = Instantiate(completedQuestPF, completedQuestParent, false);
+        CompletedQuestSlot cQuestSlot = questSlot.GetComponent<CompletedQuestSlot>();
+        cQuestSlot.Set(titleText, experienceText, goldText);
+    }
+    public void UpdateActiveQuest(){
+        player.quest = CurrentQuest();
+        titleText.text = CurrentQuest().title;
+        descriptionText.text = CurrentQuest().description;
+        experienceText.text = CurrentQuest().experienceReward.ToString();
+        goldText.text = CurrentQuest().goldReward.ToString();
+    }
+    public Quest CurrentQuest(){
+        return questList[index];
     }
 }

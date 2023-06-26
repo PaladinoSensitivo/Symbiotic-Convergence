@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    bool isActive = false;
-    [SerializeField]GameObject questLog;
+    bool isDestroyed = false;
+    [SerializeField] GameObject questLog, questLogTxt, inventoryTAB;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.J) && isActive == false)
         {
-            questLog.SetActive(true);
-            isActive = true;
+            if(isDestroyed == false){
+                questLogTxt.SetActive(false);
+                isDestroyed = true;
+            }
+            SetTabActive(questLog);
         }
         else if (Input.GetKeyDown(KeyCode.J) && isActive == true || Input.GetKeyDown(KeyCode.Escape) && isActive == true) 
         {
-            questLog.SetActive(false);
-            isActive = false;
+            SetTabActive(inventoryTAB);
         }
+    }
+    public void SetTabActive(GameObject tab){
+        tab.SetActive(!tab.activeInHierarchy);
     }
 }

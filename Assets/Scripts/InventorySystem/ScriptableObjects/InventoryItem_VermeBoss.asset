@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3772e2ef8b4bc90469b21dcaa6958990, type: 3}
+  m_Name: InventoryItem_VermeBoss
+  m_EditorClassIdentifier: 
+  id: InventoryItem_VermeBoss
+  displayName: Verme Boss
+  icon: {fileID: 21300000, guid: 4f9c752ff56e6344ea7f3bd48e11c1fa, type: 3}
+  prefab: {fileID: 5445594456601693346, guid: ea7b084e315f2e94bac8a44af3b8096a, type: 3}

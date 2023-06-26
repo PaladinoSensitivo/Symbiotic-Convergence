@@ -8,7 +8,7 @@ public class InventorySystem : MonoBehaviour
     [SerializeField]
     GameObject slotPrefab;
     [SerializeField]
-    Transform slotParent;
+    Transform slotParent, slotUIParent;
     Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
     Dictionary<InventoryItemData, InventorySlot> m_bagDictionary;
     public List<InventoryItem> inventory {get; private set;}
@@ -54,7 +54,7 @@ public class InventorySystem : MonoBehaviour
                 InventoryItem newItem = new InventoryItem(referenceData);
                 inventory.Add(newItem);
                 m_itemDictionary.Add(referenceData, newItem);
-                GameObject objSlot = Instantiate(slotPrefab, slotParent, false);
+                GameObject objSlot = Instantiate(slotPrefab, slotUIParent, false);
                 InventorySlot slot = objSlot.GetComponent<InventorySlot>();
                 m_bagDictionary.Add(referenceData, slot);
                 slot.Set(newItem);
@@ -78,12 +78,6 @@ public class InventorySystem : MonoBehaviour
                 inventory.Remove(value);
                 m_itemDictionary.Remove(referenceData);
             }
-        }
-        else
-        {
-            InventoryItem newItem = new InventoryItem(referenceData);
-            inventory.Add(newItem);
-            m_itemDictionary.Add(referenceData, newItem);            
         }
     }
 }

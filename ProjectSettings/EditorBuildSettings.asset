@@ -11,12 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quest.unity
     guid: 7d7c3759ed94996439d4a1e50a4643a1
-  - enabled: 1
-    path: Assets/Scenes/QuestPrincipal.unity
-    guid: b7f073b9622254465b2b33eb246232e3
-  - enabled: 1
-    path: Assets/Scenes/Creditos.unity
-    guid: 90a228acc53d845588265cecd910ab04
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

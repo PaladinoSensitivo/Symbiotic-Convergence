@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         Health healthUI = gameObject.GetComponent<Health>();
-        healthUI.health = HP;
+        healthUI.health = HP;        
     }
     void Update()
     {
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
         UpdateAnimator(); 
 
-        QuestSystem();
+        //QuestSystem();        
     }
     private void FixedUpdate()
     {
@@ -75,8 +75,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(other.gameObject.tag == "QuestTrigger")
         {
-            quest.goal.ReachPlace();
+            if(other == questGiver.CurrentQuest().goal.questTrigger){
+                //questGiver.CurrentQuest().goal.ReachPlace();
+                questGiver.NextQuest();
+            }
         }
+
         
     }
 
@@ -168,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
         }        
     }
 
-    public void QuestSystem()
+    /*public void QuestSystem()
     {
         if (quest.isActive)
         {
@@ -182,9 +186,20 @@ public class PlayerMovement : MonoBehaviour
             {
                 experience += quest.experienceReward;
                 gold += quest.goldReward;
+                //Gold and Experience Gain
+
+                //experience += questGiver.CurrentQuest().experienceReward;
+                //gold += questGiver.CurrentQuest().goldReward;
                 questGiver.NextQuest();
             }
+            if (questGiver.CurrentQuest().goal.isTrigger == true)
+            {
+                //experience += questGiver.CurrentQuest().experienceReward;
+                //gold += questGiver.CurrentQuest().goldReward;
+                questGiver.NextQuest();
+                Debug.Log("proxima quest");
+            }
         }
-    }
+    }*/
 
 }

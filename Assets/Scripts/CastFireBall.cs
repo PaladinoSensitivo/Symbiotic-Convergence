@@ -10,7 +10,7 @@ public class CastFireBall : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Shoot();
         }

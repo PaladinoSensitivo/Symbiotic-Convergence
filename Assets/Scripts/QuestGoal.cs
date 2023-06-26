@@ -9,7 +9,8 @@ public class QuestGoal
 
     public int requiredAmount;
     public int currentAmount;
-    public bool trigger = false;
+    public Collider questTrigger;
+    //public bool isTrigger = false;
 
     public bool isReached()
     {
@@ -32,11 +33,12 @@ public class QuestGoal
             currentAmount++;
     }
 
-    public void ReachPlace()
+    /*public void ReachPlace()
     {
-        if (goalType == GoalType.Trigger)
-            trigger = true;
-    }    
+        if (goalType == GoalType.Trigger){
+            isTrigger = true;
+        }
+    } */   
 }
 public enum GoalType
 {

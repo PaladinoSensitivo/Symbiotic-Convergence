@@ -23,18 +23,6 @@ public class GameManager : MonoBehaviour
     public float slimeAlertTime = 3f;
     public float slimeAttackDelay = 1f;
     public float slimeLookAtSpeed = 1f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ChangeGameState(GameState newState)
     {
         gameState = newState;

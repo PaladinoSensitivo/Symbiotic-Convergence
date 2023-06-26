@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3772e2ef8b4bc90469b21dcaa6958990, type: 3}
+  m_Name: InventoryItem_Mush
+  m_EditorClassIdentifier: 
+  id: InventoryItem_Mush
+  displayName: Mush
+  icon: {fileID: 21300000, guid: 1621611a32dfebf4b959ed16d7cbb922, type: 3}
+  prefab: {fileID: 1092126062443534068, guid: 3c1401684df156e4cb62fde486605595, type: 3}
