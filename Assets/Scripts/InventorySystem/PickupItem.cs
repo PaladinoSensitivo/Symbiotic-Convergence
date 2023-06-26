@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    public Collider playerCol;
+    //public Collider playerCol;
     void OnTriggerEnter(Collider other) {
         if(other.GetComponent<ItemObject>() != null)
         {
