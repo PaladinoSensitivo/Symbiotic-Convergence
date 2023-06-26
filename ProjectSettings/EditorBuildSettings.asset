@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quest.unity
     guid: 7d7c3759ed94996439d4a1e50a4643a1
-  - enabled: 1
-    path: Assets/Scenes/NavMesh.unity
-    guid: c8285ce3330e4664a9103d8eed88dd42
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

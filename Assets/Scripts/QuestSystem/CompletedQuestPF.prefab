@@ -333,9 +333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_completedTitle: {fileID: 8856123050107808873}
-  m_completedDescription: {fileID: 0}
-  m_completedExperienceText: {fileID: 0}
-  m_completedGoldText: {fileID: 0}
+  m_completedTitleExperienceText: {fileID: 8856123050301560683}
+  m_completedTitleGoldText: {fileID: 8856123051917418304}
 --- !u!114 &2575401968524707939
 MonoBehaviour:
   m_ObjectHideFlags: 0

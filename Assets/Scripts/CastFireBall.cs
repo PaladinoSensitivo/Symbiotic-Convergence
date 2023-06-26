@@ -18,6 +18,6 @@ public class CastFireBall : MonoBehaviour
         
     void Shoot()
     {
-        Instantiate(fireBallPf, firePoint.position, Quaternion.identity);
+        Instantiate(fireBallPf, firePoint.position, firePoint.rotation);
     }
 }

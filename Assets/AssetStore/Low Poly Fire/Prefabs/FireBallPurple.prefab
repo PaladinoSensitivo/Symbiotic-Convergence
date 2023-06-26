@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8327188023111981195}
   - component: {fileID: 1466916851133532094}
   - component: {fileID: 1253181872485385700}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 6395172212334232771}
   - component: {fileID: 6395172212315881859}
   - component: {fileID: 6395172212315797539}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fire_Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4959,7 +4959,7 @@ GameObject:
   - component: {fileID: 8269302683697716985}
   - component: {fileID: -3277560710591370671}
   - component: {fileID: -621927510833219789}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireBallPurple
   m_TagString: Untagged
   m_Icon: {fileID: 0}

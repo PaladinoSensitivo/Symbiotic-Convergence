@@ -28,10 +28,17 @@ public class QuestGiver : MonoBehaviour
         goldText.text = questList[index].goldReward.ToString();
     }
 
+    void FixedUpdate(){
+        if(CurrentQuest().goal.isReached() == true){
+            NextQuest();
+        }
+    }
     public void NextQuest()
     {
         UpdateCompletedQuest();
-        index++;
+        if(index < questList.Length)
+            index++;
+        Debug.Log(index);
         Debug.Log(questList[index].goal.goalType);
         questList[index-1].isActive = false;
         questList[index].isActive = true;
@@ -43,11 +50,11 @@ public class QuestGiver : MonoBehaviour
         cQuestSlot.Set(titleText, experienceText, goldText);
     }
     public void UpdateActiveQuest(){
-        player.quest = questList[index];
-        titleText.text = questList[index].title;
-        descriptionText.text = questList[index].description;
-        experienceText.text = questList[index].experienceReward.ToString();
-        goldText.text = questList[index].goldReward.ToString();        
+        player.quest = CurrentQuest();
+        titleText.text = CurrentQuest().title;
+        descriptionText.text = CurrentQuest().description;
+        experienceText.text = CurrentQuest().experienceReward.ToString();
+        goldText.text = CurrentQuest().goldReward.ToString();
     }
     public Quest CurrentQuest(){
         return questList[index];

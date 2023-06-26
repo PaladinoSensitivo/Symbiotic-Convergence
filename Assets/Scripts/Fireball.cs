@@ -12,12 +12,19 @@ public class Fireball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Rb.velocity = transform.right * speed;
+        Rb.velocity = transform.forward * speed;
         Destroy(gameObject, lifeSpan);
+    }
+    /* void OnTriggerEnter(Collider other) 
+    {
+        if(other.gameObject.tag == "TakeDamage")
+        {
+            GetHit(1);
+        }
     }
 
     //Function to hit the enemy
-    /*public virtual void OnTriggerEnter2D(Collider2D hitInfo)
+    public virtual void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Enemy enemyHit = hitInfo.GetComponent<Enemy>();
         if (enemyHit != null)
