@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
             }
             SetTabActive(questLog);
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             SetTabActive(inventoryTAB);
         }
