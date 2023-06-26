@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject questLog, questLogTxt, inventoryTAB;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && isActive == false)
+        if (Input.GetKeyDown(KeyCode.J))
         {
             if(isDestroyed == false){
                 questLogTxt.SetActive(false);
@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
             }
             SetTabActive(questLog);
         }
-        else if (Input.GetKeyDown(KeyCode.J) && isActive == true || Input.GetKeyDown(KeyCode.Escape) && isActive == true) 
+        if (Input.GetKeyDown(KeyCode.J))
         {
             SetTabActive(inventoryTAB);
         }

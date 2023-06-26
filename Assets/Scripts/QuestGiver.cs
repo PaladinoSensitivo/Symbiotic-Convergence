@@ -19,15 +19,13 @@ public class QuestGiver : MonoBehaviour
 
     public void Start()
     {
-        player.quest = quest;
-        titleText.text = quest.title;
-        descriptionText.text = quest.description;
-        experienceText.text = quest.experienceReward.ToString();
-        goldText.text = quest.goldReward.ToString();
-    }
-    public void Update()
-    {
-
+        player.quest = questList[index];
+        questList[index].isActive = true;
+        Debug.Log(questList[index].goal.goalType);
+        titleText.text = questList[index].title;
+        descriptionText.text = questList[index].description;
+        experienceText.text = questList[index].experienceReward.ToString();
+        goldText.text = questList[index].goldReward.ToString();
     }
 
     void FixedUpdate(){
@@ -62,3 +60,15 @@ public class QuestGiver : MonoBehaviour
         return questList[index];
     }
 }
+
+/*public class CompletedQuestData 
+{
+    public Text completedTitle;
+    public Text completedTitleExperienceText;
+    public Text completedTitleGoldText;
+    public CompletedQuestData(Text title, Text experienceText, Text goldText){
+        completedTitle = title;
+        completedTitleExperienceText = experienceText;
+        completedTitleGoldText = goldText;
+    }
+}*/
