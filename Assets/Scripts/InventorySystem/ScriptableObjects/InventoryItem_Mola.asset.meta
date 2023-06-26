@@ -1,12 +1,8 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scenes/Creditos.unity.meta
-guid: 07276f0194aff7640940cbfe6367fb4d
-DefaultImporter:
-========
 guid: e91ed00dd999c5344ad86ada048e6405
 NativeFormatImporter:
->>>>>>>> merge-test:Assets/Scripts/InventorySystem/ScriptableObjects/InventoryItem_Mola.asset.meta
   externalObjects: {}
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

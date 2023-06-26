@@ -174,18 +174,10 @@ public class PlayerMovement : MonoBehaviour
 
     /*public void QuestSystem()
     {
-        if (quest.isActive)
+        if (questGiver.CurrentQuest().isActive)
         {
-            if (quest.goal.isReached())
+            if (questGiver.CurrentQuest().goal.isReached())
             {
-                experience += quest.experienceReward;
-                gold += quest.goldReward;
-                questGiver.NextQuest();
-            }
-            else if (quest.goal.trigger == true)
-            {
-                experience += quest.experienceReward;
-                gold += quest.goldReward;
                 //Gold and Experience Gain
 
                 //experience += questGiver.CurrentQuest().experienceReward;
