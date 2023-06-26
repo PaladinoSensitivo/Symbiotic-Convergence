@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private string nomeDoLevelDeJogo;
-    [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
-    public string cena;
+    [SerializeField] GameObject menuAjustes;
+    bool isPaused;
 
     public void Jogar()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(nomeDoLevelDeJogo);
     }
     public void AbrirOpcoes()
@@ -24,28 +25,33 @@ public class MainMenuManager : MonoBehaviour
     }
     public void ChamaCenaCredito()
     {
+        Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Creditos");
     }
     public void ChamaCenaMenuInicial()
     {
+        Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene("IntroScene"); //Atencao!!!, alterar para o nome correto da cena
     }
-    public void Pausado()
+    public void Pause()
     {
-        Time.timeScale = 0; //jogo está pausado
-        AudioSource[] audios = FindObjectsOfType<AudioSource>();
-        foreach (AudioSource a in audios)
-        {
-            a.Pause();
+        isPaused = !isPaused;
+        if(isPaused == true){
+            Time.timeScale = 0; //jogo está pausado
+            AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource a in audios)
+            {
+                a.Pause();
+            }
         }
-    }
-    public void SairDoPause()
-    {
-        Time.timeScale = 1; // sair do pause
-        AudioSource[] audios = FindObjectsOfType<AudioSource>();
-        foreach (AudioSource a in audios)
-        {
-            a.Play();
+        else
+        {            
+            Time.timeScale = 1; // sair do pause
+            AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource a in audios)
+            {
+                a.Play();
+            }
         }
     }
 
@@ -53,5 +59,21 @@ public class MainMenuManager : MonoBehaviour
     {
         Debug.Log("Sair do Jogo");
         Application.Quit();
+    }
+
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            if(painelOpcoes.activeSelf == true){
+                painelOpcoes.SetActive(false);
+                Pause();
+                return;
+            }
+            Pause();
+            MenuAjustes();
+        }
+    }
+
+    void MenuAjustes(){
+        menuAjustes.SetActive(!menuAjustes.activeInHierarchy);
     }
 }
